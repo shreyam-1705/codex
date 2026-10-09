@@ -1,0 +1,28 @@
+{
+  "name": "tracesight",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TraceSight - Runtime Eyes for Codex",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "start:backend": "npm run dev --workspace=backend",
+    "start:third-party": "npm run dev --workspace=third-party-service",
+    "start:demo": "npm run dev --workspace=demo-api",
+    "seed:traces": "node scripts/seed-traces.js"
+  },
+  "keywords": [
+    "opentelemetry",
+    "mcp",
+    "codex",
+    "tracing",
+    "observability"
+  ],
+  "author": "LoneWolf",
+  "license": "MIT"
+}
+
